@@ -1,0 +1,42 @@
+<!-- Content Wrapper. Contains page content -->
+<!-- Content Header (Page header) -->
+<section >
+
+<div class="container" id="pul-todo" class="pull-right">
+  <div class="row">
+
+  <h1>
+    Pesquisar Produtos
+  </h1>
+</div>
+</div>
+
+<!-- Main content -->
+            
+            <div class="container" id="todo-det">
+              <div class="row">
+            <div class="box-body no-padding">
+                
+                
+                  {loop="$products"}
+                  
+                    <ul>
+                    <li><a href="/products/{$value.desurl}">{$value.desproduct}</a></li>
+
+                    </ul>
+                  
+                  {/loop}
+            </div>
+          </div>
+        </div>
+            <!-- /.box-body -->
+            <div class="box-footer clearfix">
+              <ul class="pagination pagination-sm no-margin pull-right">
+                {loop="$pages"}
+                <li><a href="{$value.href}">{$value.text}</a></li>
+                {/loop}
+              </ul>
+            </div>
+          
+  
+</section>
